@@ -1,0 +1,81 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  height: 100vh;
+  background: #0e515a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.main {
+  width: 70%;
+  text-align: center;
+  color: #38a086;
+}
+
+.btn-container {
+  margin: 3rem 0;
+  display: flex;
+  justify-content: space-between;
+}
+.btn {
+  width: 25%;
+  font-size: 1.5rem;
+  padding: 10px;
+  border-radius: 10px;
+  outline: none;
+  background: #cf910b;
+  border: 3px solid #ac3c10;
+  color: #ffffff;
+  transition: all 0.7s;
+}
+.btn:hover {
+  cursor: pointer;
+  color: #2138bb;
+  background: #bb690c;
+}
+.score-container {
+  width: 60%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 2rem auto;
+}
+.player-score,
+.computer-score {
+  font-size: 5rem;
+  margin-top: 1.5rem;
+  color: #ffffff;
+  transition: all 0.3s;
+}
+.score-change {
+  transform: scale(0.2);
+  color: #f6fac7;
+}
+.result-container {
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.result {
+  font-size: 2rem;
+  transition: all 0.5s;
+}
+.tie {
+  color: #a10c0c;
+}
+
+@media screen and (max-width: 1000px) {
+  .main {
+    width: 90%;
+  }
+}
+@media screen and (max-width: 700px) {
+  .score-container {
+    width: 100%;
+  }
+}
