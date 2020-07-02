@@ -7,6 +7,31 @@
     <meta charset="UTF-8" />
     <title>Rock, Paper and Scissors</title>
     <link rel="stylesheet" type=text/css href="style.css">
+  </head>
+
+  <body>
+    <div class="main">
+      <h1>Pick Your Move</h1>
+      <div class="btn-container">
+        <button class="btn" data-hand="Rock">Rock</button>
+        <button class="btn" data-hand="Paper">Paper</button>
+        <button class="btn" data-hand="Scissors">Scissors</button>
+      </div>
+      <div class="score-container">
+        <div>
+          <h2>Your Score</h2>
+          <h2 class="player-score">0</h2>
+        </div>
+        <div>
+          <h2>Computer's Score</h2>
+          <h2 class="computer-score">0</h2>
+        </div>
+      </div>
+      <div class="result-container">
+        <h1 class="result"></h1>
+      </div>
+    </div>
+
     <script>
       let countA = 0;
       let countB = 0;
@@ -42,10 +67,23 @@
                 return `The result is ${computerSelection}. You win.\nComputer: ${countB} You: ${countA}`;
         } else return "Enter a valid option!";
         }
+        function game() {
+            for (let u = 0; u < 5; u++) {
+                const computerSelection = computerPlay();
+                const playerSelection = prompt("Rock, Paper or Scissors?").toLowerCase();
+                alert(playNow(playerSelection, computerSelection));
+            }
+            if (countA > countB) {
+                alert(`You won!\nFinal score - Computer: ${countB} You: ${countA}`);
+            } else if (countA < cCount) {
+                alert(`You lost!\nFinal score - Computer: ${countB} You: ${countA}`);
+            } else if (countA === countB) {
+                alert(`You tied!\nFinal score - Computer: ${countB} You: ${countA}`);
+            }
+        }
+        game();
         }
       }
     </script>
-  </head>
-
-  <body></body>
+  </body>
 </html>
