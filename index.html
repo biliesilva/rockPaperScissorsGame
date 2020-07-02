@@ -1,0 +1,51 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Rock, Paper and Scissors</title>
+    <link rel="stylesheet" type=text/css href="style.css">
+    <script>
+      let countA = 0;
+      let countB = 0;
+
+      function computerPlay() {
+        const computerPlay = ["Rock", "Paper", "Scissors"];
+        return computerPlay[Math.floor(Math.random() * computerPlay.length)];
+      }
+
+      function playNow(playerSelection, computerSelection) {
+        if (playerSelection === computerSelection.toLowerCase()) {
+          return `The result is ${computerSelection}. a tie. Let's do again!`;
+        } else if (
+          playerSelection === "rock" &&
+          computerSelection === "Paper"
+        ) {
+          cCount++;
+          return `The result is ${computerSelection}. You win!.\nComputer: ${countB} You: ${countA}`;
+        } else if (playerSelection === "rock" && computerSelection === "Scissors") {
+                pCount++;
+                return `The result is ${computerSelection}. You win.\nComputer: ${countB} You: ${countA}`;
+        } else if (playerSelection === "paper" && computerSelection === "Rock") {
+                pCount++;
+                return `The result is ${computerSelection}. You win.\nComputer: ${countB} You: ${countA}`;
+        } else if (playerSelection === "paper" && computerSelection === "Scissors") {
+                cCount++;
+                return `The result is ${computerSelection}. You lose.\nComputer: ${countB} You: ${countA}`;
+        } else if (playerSelection === "scissors" && computerSelection === "Rock") {
+                cCount++;
+                return `The result is ${computerSelection}. You lose.\nComputer: ${countB} You: ${countA}`;
+        } else if (playerSelection === "scissors" && computerSelection === "Paper") {
+                pCount++;
+                return `The result is ${computerSelection}. You win.\nComputer: ${countB} You: ${countA}`;
+        } else return "Enter a valid option!";
+        }
+        }
+      }
+    </script>
+  </head>
+
+  <body></body>
+</html>
